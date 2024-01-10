@@ -41,6 +41,48 @@
     width: auto;
     background-color: #ffd36b;
   }
+
+  .minimal-img-box {
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none;
+    /* Prevent text selection */
+  }
+
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: hsl(45, 100%, 72%);
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+
+  /* Hide the nested list */
+  .nested {
+    display: none;
+    padding-bottom: 16px;
+  }
+
+  .nested li {
+    padding-left: 20px;
+    list-style-type: square;
+    list-style-position: inside;
+  }
+
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
 </style>
 
 <body>
@@ -56,7 +98,6 @@
     -->
 
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
 
         <figure class="avatar-box">
@@ -76,11 +117,9 @@
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator" style="margin-top: 14px;"></div>
 
         <ul class="contacts-list">
-
           <li class="contact-item">
 
             <div class="icon-box">
@@ -92,11 +131,9 @@
 
               <a href="mailto:yahyazaher1221@gmail.com" class="contact-link">yahyazaher1221@gmail.com</a>
             </div>
-
           </li>
 
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
@@ -108,7 +145,6 @@
             </div>
 
           </li>
-
         </ul>
 
         <div class="separator"></div>
@@ -126,16 +162,9 @@
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
         </ul>
-
       </div>
-
     </aside>
-
-
-
-
 
     <!--
       - #main-content
@@ -190,7 +219,6 @@
             <div class="service-content-box">
               <h4 class="h4 article-title">Reflection</h4>
               <p class="service-item-text">
-
                 In my role as the team manager, I focused on programming the Q-arm and contributing to the CAD design of
                 the Surgical Container. Using Python, we coded various functionalities for the Q-arm, achieving a
                 well-programmed result that exceeded medical standards.
@@ -213,7 +241,6 @@
             </div>
           </div>
 
-
           <section class="service">
             <h4 class="h4 article-title" style="margin-top: 24px;">Design Process</h4>
             <ul class="service-list">
@@ -221,95 +248,124 @@
               <li class="service-item">
                 <div>
                   <h4 class="h4 article-title">Programming</h4>
-                  <p class="service-item-text">
-                    <b>1. Requirements:</b>
-                    <br>
-                    -Design a Python program that can control the q-arm robot to pick up, drop off, and rotate.
-                    <br>
-                    -Ensure the ability to perform functions manually using a potentiometer.
-                    <br>
-                    <br>
-                    <b>2. Created a Flow Chart and Wrote Pseudocode:</b>
-                    <br>
-                    -Developed a visual representation of the program's flow.
-                    <br>
-                    -Drafted pseudocode for the three main functions: Pickup, Drop off, and Rotate.
-                    <br>
-                    <br>
-                    <b>3. Wrote Code:</b>
-                    <br>
-                    -Implemented the Pickup, Drop off, and Rotate functions based on the pseudocode.
-                    <br>
-                    <br>
-                    <b>4. Tested and Troubleshooted Code:</b>
-                    <br>
-                    -Executed tests to ensure each function behaved as expected.
-                    </br>
-                    -Identified and resolved any errors or unexpected behavior during testing.
-                  </p>
-
-
-
-
-
+                  <ul>
+                    <li class="service-item-text">
+                      <span class="caret"><b>1. Requirements:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Design a Python program that can control the q-arm robot to pick up, drop off, and rotate.
+                        </li>
+                        <li>
+                          Ensure the ability to perform functions manually using a potentiometer.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>2. Created a Flow Chart and Wrote Pseudocode:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Developed a visual representation of the program's flow.
+                        </li>
+                        <li>
+                          Drafted pseudocode for the three main functions: Pickup, Drop off, and Rotate.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>3. Wrote Code:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Implemented the Pickup, Drop off, and Rotate functions based on the pseudocode.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>4. Tested and Troubleshooted Code:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Executed tests to ensure each function behaved as expected.
+                        </li>
+                        <li>
+                          Identified and resolved any errors or unexpected behavior during testing.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </li>
 
               <li class="service-item">
                 <div>
                   <h4 class="h4 article-title">Modeling</h4>
-                  <p class="service-item-text">
-                    <b>1. Requirements: </b>
-                    <br>
-                    -Design a Surgical Container
-                    <br>
-                    <br>
-                    <b>2. Drew a Rough Container Sketch:</b>
-                    <br>
-                    -Sketched a basic design, focusing on safety like adding a lip to prevent tools from slipping.
-                    <br>
-                    <br>
-                    <b>3. Made a 3D Model with Cardboard:</b>
-                    <br>
-                    -Created a cardboard version based on the sketch. Checked if it was easy to use and fit well with
-                    the Q-Arm.
-                    <br>
-                    <br>
-                    <b>4. Fixed and Improved the Design:</b>
-                    <br>
-                    -Made changes based on feedback from the cardboard model.
-                    <br>
-                    <br>
-                    <b>5. Used AutoCAD Inventor for Final Design:</b>
-                    <br>
-                    -Used AutoCAD to make a detailed digital version.
-                    </br>
-                    -Made sure the measurements fit the requirments.
-                    <br>
-                    <br>
-                    <b>6. Picked Material Using Granta:</b>
-                    <br>
-                    -Chose a lightweight but strong material using Granta.
-                    <br>
-                    <br>
-                    <b>7. 3D Printed the Container:</b>
-                    <br>
-                    -Printed the final design using a 3D printer.
-
-                  </p>
-
+                  <ul>
+                    <li class="service-item-text">
+                      <span class="caret"><b>1. Requirements:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Design a Surgical Container
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>2. Drew a Rough Container Sketch:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Sketched a basic design, focusing on safety like adding a lip to prevent tools from slipping.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>3. Made a 3D Model with Cardboard:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Created a cardboard version based on the sketch. Checked if it was easy to use and fit well
+                          with
+                          the Q-Arm.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>4. Fixed and Improved the Design:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Made changes based on feedback from the cardboard model.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>5. Used AutoCAD Inventor for Final Design:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Used AutoCAD to make a detailed digital version.
+                        </li>
+                        <li>
+                          Made sure the measurements fit the requirments.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>6. Picked Material Using Granta:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Chose a lightweight but strong material using Granta.
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="service-item-text">
+                      <span class="caret"><b>7. 3D Printed the Container:</b></span>
+                      <ul class="nested">
+                        <li>
+                          Printed the final design using a 3D printer.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </li>
             </ul>
           </section>
 
-
-
-
-
-
           <ul class="service-list" style="margin-top: 24px;">
-
             <div>
               <center>
                 <p class="service-item-text">Initial Surgical Container Prototype </p>
@@ -329,8 +385,7 @@
             <div>
               <center>
                 <p class="service-item-text">Programming Flow Chart</p>
-                <img class="service-item-image" src="./assets/images/FlowChart.PNG"
-                  style="border:4px solid #ffd36b ">
+                <img class="service-item-image" src="./assets/images/FlowChart.PNG" style="border:4px solid #ffd36b ">
               </center>
             </div>
             <div>
@@ -339,23 +394,32 @@
                 <img class="service-item-image" src="./assets/images/Final Model Container.PNG"
                   style="border:4px solid #ffd36b ">
               </center>
-              <div>
-                <center>
-                  <p class="service-item-text">Final Surgical Container Engineering Design Drawing</p>
-                  <img class="service-item-image" src="./assets/images/Container Drawing.PNG"
-                    style="border:4px solid #ffd36b ">
-                </center>
-              </div>
-            </div>
             
-
+            <div>
+              <center>
+                <p class="service-item-text">Final Surgical Container Engineering Design Drawing</p>
+                <img class="service-item-image" src="./assets/images/Container Drawing.PNG"
+                  style="border:4px solid #ffd36b ">
+              </center>
+            </div>
+          </div>
           </ul>
 
           <button class="mainBtn service-item-text service-item"
             onclick="window.open('./assets/Thurs-14_P2_DesignReport.pdf','_blank')">Final Report</button>
         </section>
 
+        <script>
+          var toggler = document.getElementsByClassName("caret");
+          var i;
 
+          for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+              this.parentElement.querySelector(".nested").classList.toggle("active");
+              this.classList.toggle("caret-down");
+            });
+          }
+        </script>
 
 
         <!--

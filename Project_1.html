@@ -41,6 +41,48 @@
     width: auto;
     background-color: #ffd36b;
   }
+
+  .minimal-img-box {
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none;
+    /* Prevent text selection */
+  }
+
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: hsl(45, 100%, 72%);
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+
+  /* Hide the nested list */
+  .nested {
+    display: none;
+    padding-bottom: 16px;
+  }
+
+  .nested li {
+    padding-left: 20px;
+    list-style-type: square;
+    list-style-position: inside;
+  }
+
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
 </style>
 
 <body>
@@ -225,66 +267,92 @@
             </div>
           </div>
 
-
           <div class="service-item" style="margin-top: 24px;">
             <div class="service-content-box">
               <h4 class="h4 article-title">Design Process</h4>
-              <p class="service-item-text"><b>1. Define the Problem:</b> </p>
-              <p class="service-item-text">-Design a simple, off-grid wind turbine for the Guatemalan village of Santa
-                Cruz La Laguna, providing sufficient electricity for basic devices with minimal maintenance.</p>
-              <br>
-              <p class="service-item-text"><b>2. Material Selection and Conceptual Design: </b> </p>
-              <p class="service-item-text">-Compared and contrasted properties of CFRP epoxy against alternatives using
-                material property charts.</p>
-              <p class="service-item-text">-Systematically evaluated materials with a decision matrix, considering
-                factors like ease of access, corrosion resistance, maintenance, and wear resistance.</p>
-              <p class="service-item-text">-Utilized CAD modeling to ensure the turbine blade's deflection remains below
-                10mm, aligning with the project's stiffness constraints.</p>
-              <br>
-              <p class="service-item-text"><b>3. Finalized Design: </b> </p>
-              <p class="service-item-text">-Chose CFRP epoxy based on its lightweight, durable, and corrosion-resistant
-                properties identified through material property chart analysis.</p>
-              <p class="service-item-text">-Utilized CAD modeling to confirm the ideal blade thickness of 53.33mm,
-                meeting the stiffness constraints with a deflection below 10mm.</p>
-              <p class="service-item-text">-Considered local conditions, emphasizing a design that suits the off-grid
-                village's needs, promoting easy assembly and minimal maintenance.</p>
-
+              <ul>
+                <li>
+                  <span class="caret service-item-text"><b>1. Define the Problem:</b></span>
+                  <ul class="nested">
+                    <li class="service-item-text">Design a simple, off-grid wind turbine for the Guatemalan village of
+                      Santa
+                      Cruz La Laguna, providing sufficient electricity for basic devices with minimal maintenance.</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="caret service-item-text"><b>2. Material Selection and Conceptual Design:</b></span>
+                  <ul class="nested">
+                    <li class="service-item-text">Compared and contrasted properties of CFRP epoxy against alternatives
+                      using
+                      material property charts.</li>
+                    <li class="service-item-text">Systematically evaluated materials with a decision matrix, considering
+                      factors like ease of access, corrosion resistance, maintenance, and wear resistance.</li>
+                    <li class="service-item-text">Utilized CAD modeling to ensure the turbine blade's deflection remains
+                      below
+                      10mm, aligning with the project's stiffness constraints.</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="service-item-text caret"><b>3. Finalized Design:</b></span>
+                  <ul class="nested">
+                    <li class="service-item-text">Chose CFRP epoxy based on its lightweight, durable, and
+                      corrosion-resistant
+                      properties identified through material property chart analysis.</li>
+                    <li class="service-item-text">Utilized CAD modeling to confirm the ideal blade thickness of
+                      53.33mm,
+                      meeting the stiffness constraints with a deflection below 10mm.</li>
+                    <li class="service-item-text">Considered local conditions, emphasizing a design that suits the
+                      off-grid
+                      village's needs, promoting easy assembly and minimal maintenance.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
-
+          
 
           <ul class="service-list" style="margin-top: 24px;">
 
 
             <div>
               <center>
-                <p class="service-item-text"> Granta Material Selection Chart</p>
-                <img class="service-item-image" src="./assets/images/Granta Chart.PNG"
+              <p class="service-item-text"> Granta Material Selection Chart</p>
+              <img class="service-item-image" src="./assets/images/Granta Chart.PNG"
                   style="border:4px solid #ffd36b ">
-              </center>
+</center>
             </div>
-
+            
             <div>
               <center>
-                <p class="service-item-text"> AutoDesk Blade Deflection Simulation Test</p>
-                <img class="service-item-image" src="./assets/images/Blade Defelction.PNG"
-                  style="border:4px solid #ffd36b ">
+              <p class="service-item-text"> AutoDesk Blade Deflection Simulation Test</p>
+              <img class="service-item-image" src="./assets/images/Blade Defelction.PNG"
+                style="border:4px solid #ffd36b ">
 
               </center>
-            </div>
-          </ul>
+              </div>
+            </ul>
           <div>
             <center>
-              <p class="service-item-text"> Material Properties of Chosen Material</p>
-              <img class="service-item-image" src="./assets/images/Material Properties.PNG"
-                style="border:4px solid #ffd36b ">
-            </center>
+            <p class="service-item-text"> Material Properties of Chosen Material</p>
+            <img class="service-item-image" src="./assets/images/Material Properties.PNG"
+              style="border:4px solid #ffd36b ">
+</center>
           </div>
           <button class="mainBtn service-item-text service-item"
             onclick="window.open('./assets/Thurs14_P1_DesignReport (1).pdf','_blank')">Final Report</button>
         </section>
 
+        <script>
+          var toggler = document.getElementsByClassName("caret");
+          var i;
 
+          for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+              this.parentElement.querySelector(".nested").classList.toggle("active");
+              this.classList.toggle("caret-down");
+            });
+          }
+        </script>
 
         <!--
           - testimonials
