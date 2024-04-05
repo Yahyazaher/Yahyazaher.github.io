@@ -334,6 +334,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
+
 }
 
 .avatar-box {
@@ -1744,10 +1745,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-list {
     gap: 30px;
-    padding: 0 20px;
+    padding: 0 13px;
   }
 
-  .navbar-link { font-weight: var(--fw-500); }
+  .navbar-link { font-weight: var(--fw-500);}
 
 
 
