@@ -15,6 +15,27 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+/* Hide the hidden content by default */
+.service-item-hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 2.0s ease, opacity 2.0s ease; /* Add smooth transition for max-height and opacity */
+}
+
+/* Show the hidden content when hovering over the service item */
+.service-item:hover .service-item-hidden-content {
+  max-height: 300px; /* Adjust the max-height as needed */
+  opacity: 1; /* Change opacity to 1 when hovered over */
+}
+
+/* Add hover effect to the image */
+.image-hover-effect:hover .service-item-image {
+  transform: scale(1.1); /* Increase the size of the image on hover */
+  transition: transform 1.5s ease; /* Add smooth transition for scaling */
+}
+
+
 
 :root {
 
