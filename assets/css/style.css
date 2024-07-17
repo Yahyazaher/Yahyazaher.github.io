@@ -144,7 +144,12 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
-
+.circle-img {
+  width: 150px; /* Adjust the width as needed */
+  height: 130px; /* Adjust the height as needed */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the circle properly */
+}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
