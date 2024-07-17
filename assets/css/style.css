@@ -145,7 +145,7 @@
   #RESET
 \*-----------------------------------*/
 .circle-img {
-  width: 150px; /* Adjust the width as needed */
+  width: 140px; /* Adjust the width as needed */
   height: 130px; /* Adjust the height as needed */
   border-radius: 50%;
   object-fit: cover; /* Ensures the image covers the circle properly */
